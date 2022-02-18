@@ -29,7 +29,7 @@ public class Consult {
 
     private String opponentName;
 
-    private String opponentAddress;
+    private String opponentAddres;
 
     private Date opponentBirthday;
 
