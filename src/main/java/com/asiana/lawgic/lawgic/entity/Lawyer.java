@@ -15,15 +15,22 @@ public class Lawyer {
     @Id
     private String lawyerId;
 
-    private String email;
-
     private String password;
 
     private String name;
 
+    private String address;
+
+    private String email;
+
     private String phone;
 
-    private String address;
+    private boolean valid;
+
+    private boolean gender;
+
+    private int categoryId;
+
 
 
 }
