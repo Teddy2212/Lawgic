@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 @Builder
@@ -21,15 +22,17 @@ public class Client {
 
     private String name;
 
+    private Date birthday;
+
     private String email;
+
+    private String address;
 
     private String phone;
 
     private String carType;
 
-    private LocalDateTime birthday;
-
-    private String imageUrl;
+    private int gender;
 
 
 }
