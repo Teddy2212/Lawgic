@@ -12,9 +12,7 @@ import java.util.List;
 @Getter
 @ToString
 @Entity
-public class Conversation{
-
-    private Long csno;
+public class Chat {
 
     @Id
     private String chatId;
