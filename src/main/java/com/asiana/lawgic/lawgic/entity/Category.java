@@ -1,5 +1,5 @@
 package com.asiana.lawgic.lawgic.entity;
 
-public enum LawyerType {
+public enum Category {
     BUSINESS, Bankruptcy, TAX, DEFENSE, FAMILY, LABOR, ESTATE
 }

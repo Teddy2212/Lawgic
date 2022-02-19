@@ -29,7 +29,7 @@ public class Lawyer {
 
     private boolean gender;
 
-    private int categoryId;
+    private Category categoryId;
 
 
 
