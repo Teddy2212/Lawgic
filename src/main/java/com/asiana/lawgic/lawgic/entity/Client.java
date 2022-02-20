@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @ToString
 @Entity
 public class Client {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long clientId;
 

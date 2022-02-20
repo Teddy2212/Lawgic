@@ -1,5 +1,6 @@
 package com.asiana.lawgic.lawgic;
 
+import com.asiana.lawgic.lawgic.entity.CarType;
 import com.asiana.lawgic.lawgic.entity.Client;
 import com.asiana.lawgic.lawgic.repository.ClientRepository;
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,7 @@ import java.util.stream.IntStream;
 public class ClientRepositoryTest {
     private String[] address = {"경기도 시흥시", "경기도 화성시", "서울시 화곡동", " 서울시 염창동", "서울시 관악구"};
     private String[] birthday = {"1995-03-16", "1996-04-25", "1997-12-24", "1993-06-23", "1997-02-12"};
-    private String[] carType = {"Sonata", "Genesis", "Lamborghini", "SM6", "Lincoln"};
+    private CarType[] carType = { CarType.CITY_CAR, CarType.COMPACT_CAR, CarType.SPORTS_CAR, CarType.LARGE_SIZE_CAR, CarType.FULL_SIZE_LUXURY_CAR };
     private String[] email = {"young@naver.com", "teddy@nate.com", "catherine@yahoo.com", "jessy@gmail.com", "sung@naver.com"};
     private String[] name = {"유영균", "김정현", "박동은", "이연하", "이유리"};
     private String[] password = {"sddfjj@", "2324gsddf!", "we$#SD", "TS3wddfs", "w32345SD"};
@@ -30,7 +31,7 @@ public class ClientRepositoryTest {
         IntStream.rangeClosed(1, 5).forEach(i -> {
 
 
-            Client client = Client.builder().clientId("client_id_" + i)
+            Client client = Client.builder()
                     .address(address[i - 1])
                     .birthday(java.sql.Date.valueOf(birthday[i - 1]))
                     .carType(carType[i - 1])

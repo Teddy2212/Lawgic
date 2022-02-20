@@ -43,7 +43,6 @@ public class ChatRepositoryTest {
                     .client((Client) clients[i - 1])
                     .lawyer((Lawyer) lawyers[i - 1])
                     .consult((Consult) consults[i - 1])
-                    .chatId("chat_id_" + i)
                     .messages(messages)
                     .build();
             chatRepository.save(chat);
