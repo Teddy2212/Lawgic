@@ -17,7 +17,7 @@ public class Chat {
     @Id
     private String chatId;
 
-    @Column(name="message_id")
+    @CollectionTable(name = "message", joinColumns = @JoinColumn(name = "chat_id"))
     @ElementCollection(fetch= FetchType.LAZY)
     List<Message> messages=new ArrayList<>();
 
@@ -33,4 +33,8 @@ public class Chat {
     @JoinColumn(name="consult_id")
     @ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.REMOVE)
     private Consult consult;
+
+    public void setMessages(List<Message> messages){
+        this.messages=messages;
+    }
 }
