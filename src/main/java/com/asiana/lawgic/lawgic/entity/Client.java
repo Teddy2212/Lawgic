@@ -3,6 +3,8 @@ package com.asiana.lawgic.lawgic.entity;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.sql.Date;
 import java.time.LocalDateTime;
@@ -14,9 +16,9 @@ import java.time.LocalDateTime;
 @ToString
 @Entity
 public class Client {
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private String clientId;
+    private Long clientId;
 
     private String password;
 
@@ -30,7 +32,7 @@ public class Client {
 
     private String phone;
 
-    private String carType;
+    private CarType carType;
 
     private int gender;
 

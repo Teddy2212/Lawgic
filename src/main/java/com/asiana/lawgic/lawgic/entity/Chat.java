@@ -14,8 +14,9 @@ import java.util.List;
 @Entity
 public class Chat {
     @Column(name="chat_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private String chatId;
+    private Long chatId;
 
     @CollectionTable(name = "message", joinColumns = @JoinColumn(name = "chat_id"))
     @ElementCollection(fetch= FetchType.LAZY)

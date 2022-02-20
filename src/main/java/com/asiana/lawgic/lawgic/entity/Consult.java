@@ -13,7 +13,7 @@ import java.sql.Date;
 @Entity
 public class Consult {
     @Id
-    private String consultId;
+    private Long consultId;
 
     private Date appointmentDate;
 
