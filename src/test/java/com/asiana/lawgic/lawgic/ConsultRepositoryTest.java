@@ -40,7 +40,6 @@ public class ConsultRepositoryTest {
             Lawyer lawyer=((Lawyer)lawyers[i-1]);
             Client client=((Client)clients[i-1]);
             Consult consult=Consult.builder()
-                    .consultId("consult_id_"+i)
                     .appointmentDate(java.sql.Date.valueOf(appointmentDate[i-1]))
                     .lawyer(lawyer)
                     .client(client)

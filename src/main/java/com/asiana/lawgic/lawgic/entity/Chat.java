@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 public class Chat {
     @Column(name="chat_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long chatId;
 

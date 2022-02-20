@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @ToString
 @Entity
 public class Lawyer {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long lawyerId;
 

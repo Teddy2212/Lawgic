@@ -12,6 +12,7 @@ import java.sql.Date;
 @ToString
 @Entity
 public class Consult {
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long consultId;
 

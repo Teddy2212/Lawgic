@@ -26,7 +26,6 @@ public class LawyerRepositoryTest {
     public void insertLawyerData(){
         IntStream.rangeClosed(1,5).forEach(i->{
             Lawyer lawyer=Lawyer.builder()
-                    .lawyerId("lawyer_id_"+i)
                     .password(password[i-1])
                     .name(name[i-1])
                     .address(address[i-1])
