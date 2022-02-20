@@ -1,20 +1,17 @@
-package com.asiana.lawgic.lawgic.entity;
+package com.asiana.lawgic.lawgic.vo;
 
+import com.asiana.lawgic.lawgic.entity.MessageType;
 import lombok.*;
 
-import javax.persistence.Embeddable;
 
+@Getter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Data
 @Builder
-@Embeddable
-public class Message extends BaseEntity{
-
+public class MessageVO {
     private String content;
-
     private String sender;
-
     private MessageType type;
+
 }

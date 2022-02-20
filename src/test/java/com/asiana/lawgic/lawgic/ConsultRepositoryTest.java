@@ -23,6 +23,8 @@ public class ConsultRepositoryTest {
     private String[] opponentCarType={"SM7","Toska","Forte","Matiz","QM6"};
     private String[] opponentBirthday = {"1995-03-16", "1996-04-25", "1997-12-24", "1993-06-23", "1997-02-12"};
     private String[] address = {"경기도 시흥시", "경기도 화성시", "서울시 화곡동", " 서울시 염창동", "서울시 관악구"};
+    private String[] judgement = {"경기도 시흥시", "경기도 화성시", "서울시 화곡동", " 서울시 염창동", "서울시 관악구"};
+    private String[] comment = {"경기도 시흥시", "경기도 화성시", "서울시 화곡동", " 서울시 염창동", "서울시 관악구"};
     @Autowired
     private ConsultRepository consultRepository;
     @Autowired
@@ -48,6 +50,8 @@ public class ConsultRepositoryTest {
                     .opponentCarType(opponentCarType[i-1])
                     .opponentBirthday(Date.valueOf(opponentBirthday[i-1]))
                     .opponentAddress(address[i-1])
+                    .judgement("judgement "+i)
+                    .comments("comment "+i)
                     .build();
             consultRepository.save(consult);
 

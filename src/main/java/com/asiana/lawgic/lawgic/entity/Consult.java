@@ -2,9 +2,7 @@ package com.asiana.lawgic.lawgic.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Builder
@@ -18,8 +16,6 @@ public class Consult {
     private String consultId;
 
     private Date appointmentDate;
-
-    private String lawyer;
 
     private String summary;
 
@@ -37,4 +33,11 @@ public class Consult {
 
     private String opponentCarType;
 
+    @ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.REMOVE)
+    @JoinColumn(name="lawyer_id")
+    private Lawyer lawyer;
+
+    @ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.REMOVE)
+    @JoinColumn(name="client_id")
+    private Client client;
 }
