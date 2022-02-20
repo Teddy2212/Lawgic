@@ -3,6 +3,8 @@ package com.asiana.lawgic.lawgic.entity;
 import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Builder
@@ -12,8 +14,9 @@ import javax.persistence.Id;
 @ToString
 @Entity
 public class Lawyer {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private String lawyerId;
+    private Long lawyerId;
 
     private String password;
 
