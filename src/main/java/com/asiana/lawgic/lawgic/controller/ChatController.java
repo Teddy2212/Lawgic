@@ -59,9 +59,6 @@ public class ChatController {
         System.out.println("sendMessage method!!!***");
         System.out.println("message1:"+messageDTO.getContent());
         System.out.println("sender1:"+messageDTO.getSender());
-        if(simpMessagingTemplate==null){
-            System.out.println("null 입니다.");
-        }
         simpMessagingTemplate.convertAndSend("/topic/public",messageDTO);
         return messageDTO;
     }

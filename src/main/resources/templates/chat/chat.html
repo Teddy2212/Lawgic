@@ -33,7 +33,7 @@
                     <div class="chatList">
                         <div class="img">
                             <i class="fa fa-circle"></i>
-                            <img src="/demo/man01.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">05:30 am</small>
@@ -46,7 +46,7 @@
                     <div class="chatList">
                         <div class="img">
                             <i class="fa fa-circle"></i>
-                            <img src="/demo/man02.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">3 day</small>
@@ -58,7 +58,7 @@
                 <li class="active">
                     <div class="chatList">
                         <div class="img">
-                            <img src="/demo/man03.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">4 day</small>
@@ -70,7 +70,7 @@
                 <li>
                     <div class="chatList">
                         <div class="img">
-                            <img src="/demo/man04.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">18 day</small>
@@ -83,7 +83,7 @@
                     <div class="chatList">
                         <div class="img">
                             <i class="fa fa-circle"></i>
-                            <img src="/demo/man01.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">11:50 am</small>
@@ -95,7 +95,7 @@
                 <li>
                     <div class="chatList">
                         <div class="img">
-                            <img src="/demo/man02.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">20 day</small>
@@ -107,7 +107,7 @@
                 <li>
                     <div class="chatList">
                         <div class="img">
-                            <img src="/demo/man03.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">18 day</small>
@@ -119,7 +119,7 @@
                 <li>
                     <div class="chatList">
                         <div class="img">
-                            <img src="/demo/man02.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">20 day</small>
@@ -131,7 +131,7 @@
                 <li>
                     <div class="chatList">
                         <div class="img">
-                            <img src="/demo/man03.png">
+                            <img src="../images/man.png">
                         </div>
                         <div class="desc">
                             <small class="time">18 day</small>
@@ -147,7 +147,7 @@
                 <ul class="client-message-area">
                     <li class="msg-left">
                         <div class="msg-left-sub">
-                            <img src="/demo/man03.png">
+                            <img src="../images/man.png">
                             <div class="msg-desc">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua.
@@ -157,7 +157,7 @@
                     </li>
                     <li class="msg-right">
                         <div class="msg-left-sub">
-                            <img src="/demo/man04.png">
+                            <img src="../images/man.png">
                             <div class="msg-desc">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua.
@@ -168,7 +168,7 @@
                     <li class="msg-day"><small>Wednesday</small></li>
                     <li class="msg-left">
                         <div class="msg-left-sub">
-                            <img src="/demo/man03.png">
+                            <img src="../images/man.png">
                             <div class="msg-desc">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit
                             </div>
@@ -177,7 +177,7 @@
                     </li>
                     <li class="msg-right">
                         <div class="msg-left-sub">
-                            <img src="/demo/man04.png">
+                            <img src="../images/man.png">
                             <div class="msg-desc">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua.
@@ -187,7 +187,7 @@
                     </li>
                     <li class="msg-left">
                         <div class="msg-left-sub">
-                            <img src="/demo/man03.png">
+                            <img src="../images/man.png">
                             <div class="msg-desc">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit
                             </div>
@@ -196,7 +196,7 @@
                     </li>
                     <li class="msg-right">
                         <div class="msg-left-sub">
-                            <img src="/demo/man04.png">
+                            <img src="../images/man.png">
                             <div class="msg-desc">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua.
@@ -212,7 +212,7 @@
                         <button class="btn"><i class="fa fa-photo"></i></button>
                         <input type="file"/>
                     </div>
-                    <input type="text" name="" placeholder="type here...">
+                    <input type="text" name="" placeholder="type here..." class="message-input">
                     <button class="btn-send"><i class="fa fa-send"></i></button>
                 </form>
             </div>
@@ -225,16 +225,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
 
-<script src="/js/main.js"></script>
+<!--<script src="/js/main.js"></script>-->
 <script th:inline="javascript">
     'use strict';
     var dto=[[${dto}]];
-    var message=[[${message}]];
+    //var message=[[${message}]];
+
 
     var lawyerMessageArea=document.querySelector('.lawyer-message-area');
     var clientMessageArea=document.querySelector('.client-message-area')
     var messageInput = document.querySelector('.btn-send');
-    var messageInputValue=message.content;
+    var messageInputValue=document.querySelector('.message-input');
     // console.log(dto);
     // if(dto.hasOwnProperty('clientId')){
     //     console.log("hello client");
@@ -298,16 +299,16 @@
 
     function sendMessage(event) {
         console.log("sendMessage clicked");
-        var messageContent = messageInputValue.trim();
+        var messageContent = messageInputValue.value.trim();
         console.log("message 내용:"+messageContent);
         console.log(stompClient);
         if(messageContent && stompClient) {
             var chatMessage = {
                 sender: "client",
-                content: messageInputValue,
+                content: messageInputValue.value,
             };
             stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
-            messageInput.value = '';
+            messageInputValue.value = '';
         }
         event.preventDefault();
     }
@@ -317,48 +318,104 @@
         var message = JSON.parse(payload.body);
         console.log("message Received!!! from controller");
 
+        var liElement=document.createElement('li');
 
-        var messageElement = document.createElement('li');
-
-        var chatListElement=document.createElement('div');
-        var imgElement=document.createElement('div');
-        chatListElement.appendChild(imgElement);
-
-        var iElement=document.createElement('i');
-        iElement.classList.add("fa fa-circle");
-        var imageElement=document.createElement('/demo/man01.png');
-        imgElement.appendChild(iElement);
-        imgElement.appendChild(imageElement);
-
-        var descElement=document.createElement('div');
-        descElement.classList.add("desc");
-
-        var smallTimeElement=document.createElement('small');
-        var smallTimeText=document.createTextNode(message.date);
-        smallTimeElement.appendChild(smallTimeText);
-        smallElement.classList.add("time");
-
-        var h5Element=document.createElement('h5');
-        var h5Text=document.createTextNode(message.sender);
-        h5Element.appendChild(h5Text);
-        var smallElement=document.createElement('small');
-        var smallText=document.createTextNode(message.content);
-        smallTimeElement.appendChild(smallText);
-
-        descElement.appendChild(smallTimeElement);
-        descElement.appendChild(h5Element);
-        descElement.appendChild(smallElement);
-
-        chatListElement.appendChild(descElement);
-
-        messageElement.appendChild(chatListElement);
         if(dto.hasOwnProperty("clientId")){
-            clientMessageArea.appendChild(chatListElement);
+            liElement.classList.add('msg-right');
+        }else{
+            liElement.classList.add('msg-left');
+        }
+
+        var msgLeftSubDivElement=document.createElement('div');
+        msgLeftSubDivElement.classList.add('msg-left-sub');
+        liElement.appendChild(msgLeftSubDivElement);
+
+        var imgElement=document.createElement('img');
+        imgElement.src='../images/man.png';
+        imgElement.classList.add('mCS_img_loaded');
+        var msgDescElement=document.createElement('div');
+        msgDescElement.classList.add('msg-desc');
+        var msgDescTextNode=document.createTextNode(message.content);
+        msgDescElement.appendChild(msgDescTextNode);
+
+        var smallElement=document.createElement('small');
+        var smallTextNoe=document.createTextNode(message.date);
+        smallElement.appendChild(smallTextNoe);
+
+        msgLeftSubDivElement.appendChild(imgElement);
+        msgLeftSubDivElement.appendChild(msgDescElement);
+        msgLeftSubDivElement.appendChild(smallElement);
+
+        if(dto.hasOwnProperty("clientId")){
+            clientMessageArea.appendChild(liElement);
             clientMessageArea.scrollTop=clientMessageArea.scrollHeight;
         }else{
-            lawyerMessageArea.appendChild(chatListElement);
+            lawyerMessageArea.appendChild(liElement);
             lawyerMessageArea.scrollTop=lawyerMessageArea.scrollHeight;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var messageElement = document.createElement('li');
+        //
+        // var chatListElement=document.createElement('div');
+        // chatListElement.classList.add('chatList');
+        // var imgElement=document.createElement('div');
+        // imgElement.classList.add('img');
+        // chatListElement.appendChild(imgElement);
+        //
+        // var iElement=document.createElement('i');
+        // iElement.classList.add(".fa.fa-circle");
+        // var imageElement=document.createElement('img');
+        // imageElement.src="../images/man.png";
+        // imgElement.appendChild(iElement);
+        // imgElement.appendChild(imageElement);
+        //
+        // var descElement=document.createElement('div');
+        // descElement.classList.add("desc");
+        //
+        // var smallTimeElement=document.createElement('small');
+        // smallTimeElement.classList.add('time');
+        // var smallTimeText=document.createTextNode(message.date);
+        // smallTimeElement.appendChild(smallTimeText);
+        // smallTimeElement.classList.add("time");
+        //
+        // var h5Element=document.createElement('h5');
+        // var h5Text=document.createTextNode(message.sender);
+        // h5Element.appendChild(h5Text);
+        // var smallElement=document.createElement('small');
+        // var smallText=document.createTextNode(message.content);
+        // smallTimeElement.appendChild(smallText);
+        //
+        // descElement.appendChild(smallTimeElement);
+        // descElement.appendChild(h5Element);
+        // descElement.appendChild(smallElement);
+        //
+        // chatListElement.appendChild(descElement);
+        //
+        // messageElement.appendChild(chatListElement);
+        //
+        // if(dto.hasOwnProperty("clientId")){
+        //     clientMessageArea.appendChild(chatListElement);
+        //     clientMessageArea.scrollTop=clientMessageArea.scrollHeight;
+        // }else{
+        //     lawyerMessageArea.appendChild(chatListElement);
+        //     lawyerMessageArea.scrollTop=lawyerMessageArea.scrollHeight;
+        // }
+        // console.log(clientMessageArea);
 
 
 
