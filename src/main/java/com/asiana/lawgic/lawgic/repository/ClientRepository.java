@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 
-public interface ClientRepository extends JpaRepository<Client,String> {
+public interface ClientRepository extends JpaRepository<Client,Long> {
     @Query("SELECT client from Client client")
     public Object[] getAllClients();
 }
