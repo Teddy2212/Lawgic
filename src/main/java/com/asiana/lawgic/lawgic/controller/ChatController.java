@@ -26,8 +26,10 @@ public class ChatController {
     final private SimpMessagingTemplate simpMessagingTemplate;
 
 
-    @GetMapping("/chat/client/{id}")
-    public String mainClientChatController(Model model, @RequestParam Long id){
+   // @GetMapping("/chat/client/{id}")
+    @GetMapping("/chat/client")
+   // public String mainClientChatController(Model model, @RequestParam Long id){
+    public String mainClientChatController(Model model){
         List<LawyerDTO> lawyerDTOList=chatService.getLawyersByClientId(1L);
         Consult consult=chatService.getConsultByLawyerAndClientId(6L,1L);
         model.addAttribute("sender","client");
@@ -38,8 +40,9 @@ public class ChatController {
 
         return "chat/chat_client";
     }
-    @GetMapping("/chat/lawyer/{id}")
-    public String mainLawyerChatController(Model model, @RequestParam Long id){
+    // @GetMapping("/chat/lawyer/{id}")
+    @GetMapping("/chat/lawyer")
+    public String mainLawyerChatController(Model model){
         List<ClientDTO> clientDTOList=chatService.getClientsByLawyerId(6L);
         Consult consult=chatService.getConsultByLawyerAndClientId(6L,1L);
         model.addAttribute("sender","lawyer");

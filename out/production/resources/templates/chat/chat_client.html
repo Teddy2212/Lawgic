@@ -304,12 +304,11 @@
         var index = Math.abs(hash % colors.length);
         return colors[index];
     }
-
-
-    $(".btn-send").click(function(){
-
+    sendButton.addEventListener("click", saveMessage);
+    function saveMessage(){
+        console.log("에이젝스");
         $.ajax({
-            url: '/message',
+            url: '../message',
             method: 'POST',
             data: {
                 content:messageInput.value,
@@ -319,17 +318,17 @@
             },
             success: function(data){
                 console.log("데이터 출력:"+data);
-              //  window.location.replace("/");
+                //  window.location.replace("/");
             },
             error : function(error) {
                 console.log("Error!");
             },
             complete : function() {
                 console.log("complete!");
-             //   window.location.replace("/");
+                //   window.location.replace("/");
             }
         })
-    })
+    }
 
 
     document.querySelector('.message-input').addEventListener('keypress',function(e){
