@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="category.css" />
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="category.js"></script>
+</head>
+<body>
+<style>
+    h1 { text-align: center; font-size: 50px;}
+    h2 { text-align: right; font-size: 14px;}
+    h3 { text-align: left; font-size: 28px; }
+</style>
+<div>
+    <h1>Lawgic </h1>
+    <h2 style="padding-right: 15px;">오재욱님 안녕하세요</h2>
+    <h3>상담 분야</h3>
+    <hr width = "100%" color = "#0066ff" size = "2"> <br>
+
+    <div class="category" id="cartocar" style="font-size: 25px;">차 대 차</div>
+    <!-- background-color: skyblue; -->
+    <div class="category" id="cartoperson" style="font-size: 25px;">차 대 사람</div>
+    <div class="category" id="caronly" style="font-size: 25px;">차량 단독</div><br>
+    <br>
+
+    <!-- 변호사 목록 -->
+    <div id="lawyer_cartocar" style="display: none">
+        <div style="vertical-align: middle; display: inline-flex; border: solid 1px; width: 60%; padding: 0 1.5rem 1.5rem 1.5rem; margin-bottom: 1rem;">
+            <div style="float: left; ">
+                <img src="https://d238m8ukn6hkhb.cloudfront.net/file/project/live_2018apan/update/1/crop-thum-up-apan.jpg" height=100px width=100px style="margin: 2rem 0.5rem 0 0; border-radius: 70%;">
+            </div>
+            <div style="float: right; margin-left: 1rem;">
+                <h3 style="margin-bottom: 0.5rem;">김정현 변호사</h3>
+                김정현 법률 사무소<br><hr>
+                [추돌사고/과실분쟁] 분쟁조정 전문, 대표 변호사<br>
+            </div>
+            <input type="submit" value="상담신청" style="font-size: 20px; position: relative; right: -3rem; top: 1rem; margin-bottom: 0.5rem;">
+        </div>
+
+        <div style="vertical-align: middle; display: inline-flex; border: solid 1px; width: 60%; padding: 0 1.5rem 1.5rem 1.5rem; margin-bottom: 1rem;">
+        <div style="float: left; ">
+            <img src="https://image.mycelebs.com/celeb/sq/338_sq_01.jpg" height=100px width=100px style="margin: 2rem 0.5rem 0 0; border-radius: 70%;">
+        </div>
+        <div style="float: right; margin-left: 1rem;">
+            <h3 style="margin-bottom: 0.5rem;">유영균 변호사</h3>
+            법무법인 YK<br><hr>
+            [음주/뺑소니] 벌금, 감형 전문, 경력 많은 변호사<br>
+        </div>
+        <input type="submit" value="상담신청" style="font-size: 20px; position: relative; right: -3rem; top: 1rem; margin-bottom: 0.5rem;">
+    </div>
+</div>
+
+<div id="lawyer_cartoperson" style="display: none">
+    <div style="vertical-align: middle; display: inline-flex; border: solid 1px; width: 60%; padding: 0 1.5rem 1.5rem 1.5rem; margin-bottom: 1rem;">
+        <div style="float: left; ">
+            <img src="https://d238m8ukn6hkhb.cloudfront.net/file/project/live_2018apan/update/1/crop-thum-up-apan.jpg" height=100px width=100px style="margin: 2rem 0.5rem 0 0; border-radius: 70%;">
+        </div>
+        <div style="float: right; margin-left: 1rem;">
+            <h3 style="margin-bottom: 0.5rem;">차대사람 변호사</h3>
+            김정현 법률 사무소<br><hr>
+            [추돌사고/과실분쟁] 분쟁조정 전문, 대표 변호사<br>
+        </div>
+        <input type="submit" value="상담신청" style="font-size: 20px; position: relative; right: -3rem; top: 1rem; margin-bottom: 0.5rem;">
+    </div>
+
+    <div style="vertical-align: middle; display: inline-flex; border: solid 1px; width: 60%; padding: 0 1.5rem 1.5rem 1.5rem;">
+    <div style="float: left; ">
+        <img src="https://image.mycelebs.com/celeb/sq/338_sq_01.jpg" height=100px width=100px style="margin: 2rem 0.5rem 0 0; border-radius: 70%;">
+    </div>
+    <div style="float: right; margin-left: 1rem;">
+        <h3 style="margin-bottom: 0.5rem;">유영균 변호사</h3>
+        법무법인 YK<br><hr>
+        [음주/뺑소니] 벌금, 감형 전문, 경력 많은 변호사<br>
+    </div>
+    <input type="submit" value="상담신청" style="font-size: 20px; position: relative; right: -3rem; top: 1rem; margin-bottom: 0.5rem;">
+</div>
+</div>
+
+<div id="lawyer_caronly" style="display: none">
+    <div style="vertical-align: middle; display: inline-flex; border: solid 1px; width: 60%; padding: 0 1.5rem 1.5rem 1.5rem; margin-bottom: 1rem;">
+        <div style="float: left; ">
+            <img src="https://d238m8ukn6hkhb.cloudfront.net/file/project/live_2018apan/update/1/crop-thum-up-apan.jpg" height=100px width=100px style="margin: 2rem 0.5rem 0 0; border-radius: 70%;">
+        </div>
+        <div style="float: right; margin-left: 1rem;">
+            <h3 style="margin-bottom: 0.5rem;">차량단독 변호사</h3>
+            김정현 법률 사무소<br><hr>
+            [추돌사고/과실분쟁] 분쟁조정 전문, 대표 변호사<br>
+        </div>
+        <input type="submit" value="상담신청" style="font-size: 20px; position: relative; right: -3rem; top: 1rem; margin-bottom: 0.5rem;">
+    </div>
+
+<!--    <div style="vertical-align: middle; display: inline-flex; border: solid 1px; width: 60%; padding: 0 1.5rem 1.5rem 1.5rem;" margin-bottom: 1rem;">-->
+    <div style="float: left; ">
+        <img src="https://image.mycelebs.com/celeb/sq/338_sq_01.jpg" height=100px width=100px style="margin: 2rem 0.5rem 0 0; border-radius: 70%;">
+    </div>
+    <div style="float: right; margin-left: 1rem;">
+        <h3 style="margin-bottom: 0.5rem;">유영균 변호사</h3>
+        법무법인 YK<br><hr>
+        [음주/뺑소니] 벌금, 감형 전문, 경력 많은 변호사<br>
+    </div>
+    <input type="submit" value="상담신청" style="font-size: 20px; position: relative; right: -3rem; top: 1rem; margin-bottom: 0.5rem;">
+</div>
+</div>
+
+</div>
+</body>
+</html>
