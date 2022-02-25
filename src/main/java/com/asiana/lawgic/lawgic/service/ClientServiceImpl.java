@@ -28,10 +28,10 @@ public class ClientServiceImpl implements ClientService {
         }
     }
 
-    @Override
-    public ClientDTO getClientById(Long clientId) throws Exception {
-        return null;
-    }
+//    @Override
+//    public ClientDTO getClientById(Long clientId) throws Exception {
+//        return null;
+//    }
 
     public void insertClient(ClientDTO clientDTO) {
 

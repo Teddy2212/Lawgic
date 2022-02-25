@@ -1,12 +1,15 @@
 package com.asiana.lawgic.lawgic;
 
+import com.asiana.lawgic.lawgic.dto.LawyerDTO;
 import com.asiana.lawgic.lawgic.entity.Category;
 import com.asiana.lawgic.lawgic.entity.Lawyer;
 import com.asiana.lawgic.lawgic.repository.LawyerRepository;
+import com.asiana.lawgic.lawgic.service.CategoryService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.stream.IntStream;
 
@@ -22,6 +25,9 @@ public class LawyerRepositoryTest {
     private Category[] categories={Category.CAR_ONLY,Category.CAR_TO_CAR,Category.RAILROAD_CROSSING,Category.CAR_TO_CAR,Category.CAT_TO_PERSON};
     @Autowired
     private LawyerRepository lawyerRepository;
+
+    @Autowired
+    private CategoryService categoryService;
     @Test
     public void insertLawyerData(){
         IntStream.rangeClosed(1,5).forEach(i->{
@@ -38,4 +44,18 @@ public class LawyerRepositoryTest {
             lawyerRepository.save(lawyer);
         });
     }
+
+    @Test
+    public void getLawyersByCategory(){
+        Object[] Lawyers=lawyerRepository.getLawyersByCategoryId(Category.CAR_ONLY);
+    }
+
+    @Test
+    public void getLawyers(){
+        List<LawyerDTO> dto=categoryService.getLawyersByCategoryId(Category.CAR_TO_CAR);
+        for(LawyerDTO lawyer:dto){
+            System.out.println("변호사 아이디: "+lawyer.getLawyerId());
+        }
+    }
+
 }
